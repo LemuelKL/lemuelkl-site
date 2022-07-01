@@ -25,7 +25,7 @@ export default function Router() {
     text: "Contact",
     page: Home,
   }];
-  const [route, setRoute] = useState(Home);
+  const [route, setRoute] = useState(About);
   return (
     <div class={tw`w-screen h-screen flex`}>
       <div
@@ -47,8 +47,8 @@ export default function Router() {
           })}
         </div>
       </div>
-      <div class={tw`bg-gray-900 w-full flex justify-center items-center`}>
-        <div class={tw`text-white`}>{route}</div>
+      <div class={tw`bg-gray-900 text-white w-full flex justify-center items-center`}>
+        {route}
       </div>
     </div>
   );

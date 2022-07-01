@@ -19,11 +19,10 @@ export default function Home() {
           The University of Hong Kong
         </a>
       </div>
-      <div class={tw`text-lg`}>
-        <span class={tw`text-pink-500`}>
-          Loves
-        </span>
-        software
+      <div class={tw`text-xl`}>
+        <div>
+          Specialized in JavaScript & TypeScript related web development
+        </div>
       </div>
     </div>
   );
