@@ -22,15 +22,14 @@ export default function Router() {
   }];
   const [route, setRoute] = useState("home");
   return (
-    <div class={tw`w-screen h-screen flex flex-col`}>
-      <div class={tw`bg-gray-800 h-screen max-w-sm flex flex-col`}>
-        <div class={tw`basis-1/3 flex-grow p-8`}>
+    <div class={tw`w-screen h-screen flex`}>
+      <div class={tw`bg-gray-800 h-screen max-w-sm flex flex-col justify-center`}>
+        <div class={tw`flex-shrink p-8`}>
           <InfoCard></InfoCard>
         </div>
         <div
-          class={tw`basis-2/3 flex-grow flex flex-col gap-3 items-center p-8`}
+          class={tw`flex-shrink flex flex-col gap-3 items-center p-8`}
         >
-          {route}
           {routes.map(({ text, route }) => {
             return (
               <NavButton
@@ -41,7 +40,7 @@ export default function Router() {
           })}
         </div>
       </div>
-      <div></div>
+      <div class={tw`bg-gray-900 w-full`}>a</div>
     </div>
   );
 }
