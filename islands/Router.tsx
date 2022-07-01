@@ -3,77 +3,53 @@ import { h } from "preact";
 import { tw } from "@twind";
 import { useState } from "preact/hooks";
 
+import InfoCard from "../components/InfoCard.tsx";
+import NavButton from "../components/NavButton.tsx";
+import Home from "../components/Home.tsx";
+import About from "../components/About.tsx";
+
 export default function Router() {
-  const routes: { text: string; route: string }[] = [{
+  const routes: { text: string; page: () => h.JSX.Element }[] = [{
     text: "Home",
-    route: "home",
+    page: Home,
   }, {
     text: "About",
-    route: "about",
+    page: About,
   }, {
     text: "Education",
-    route: "education",
+    page: Home,
   }, {
     text: "Porfolio",
-    route: "portfolio",
+    page: Home,
   }, {
     text: "Contact",
-    route: "contact",
+    page: Home,
   }];
-  const [route, setRoute] = useState("home");
+  const [route, setRoute] = useState(Home);
   return (
     <div class={tw`w-screen h-screen flex`}>
-      <div class={tw`bg-gray-800 h-screen max-w-sm flex flex-col justify-center`}>
+      <div
+        class={tw`bg-gray-800 h-screen max-w-sm flex flex-col justify-center`}
+      >
         <div class={tw`flex-shrink p-8`}>
           <InfoCard></InfoCard>
         </div>
         <div
           class={tw`flex-shrink flex flex-col gap-3 items-center p-8`}
         >
-          {routes.map(({ text, route }) => {
+          {routes.map(({ text, page }) => {
             return (
               <NavButton
                 text={text}
-                handleClick={() => setRoute(route)}
+                handleClick={() => setRoute(page)}
               />
             );
           })}
         </div>
       </div>
-      <div class={tw`bg-gray-900 w-full`}>a</div>
-    </div>
-  );
-}
-
-type NavButtonProps = {
-  text: string;
-  handleClick: () => void;
-};
-
-const NavButton = ({ text, handleClick }: NavButtonProps) => {
-  return (
-    <button
-      class={tw
-        `bg-gray-700 w-full rounded-full p-2 text-coolGray-200 text-md font-bold hover:bg-cyan-700 shadow-cyan-100 hover:shadow-2xl shadow`}
-      onClick={handleClick}
-    >
-      {text}
-    </button>
-  );
-};
-
-const InfoCard = () => {
-  return (
-    <div class={tw`flex flex-col items-center gap-3`}>
-      <img
-        class={tw`rounded-full border-8 max-w-[70%]`}
-        src="lemuel.jpg"
-        alt="lemuel"
-      />
-      <div class={tw`flex flex-col text-white items-center`}>
-        <div class={tw`text-3xl font-bold`}>Lemuel Lee</div>
-        <div class={tw`text-lg`}>CS Undergraduate</div>
+      <div class={tw`bg-gray-900 w-full flex justify-center items-center`}>
+        <div class={tw`text-white`}>{route}</div>
       </div>
     </div>
   );
-};
+}
