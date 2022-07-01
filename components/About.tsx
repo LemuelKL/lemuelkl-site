@@ -4,7 +4,7 @@ import { tw } from "@twind";
 
 export default function Home() {
   return (
-    <div class={tw`w-full p-6 flex flex-col gap-6`}>
+    <div class={tw`w-full flex flex-col align-center gap-6`}>
       <Section title="Personal Background">
         <div>Born and raised in Hong Kong.</div>
         <div>Speaks Cantonese as a native.</div>
