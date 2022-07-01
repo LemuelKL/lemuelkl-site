@@ -22,13 +22,13 @@ export default function Router() {
     page: About,
   }, {
     name: "Education",
-    page: Home,
+    page: () => <div>Education</div>,
   }, {
     name: "Porfolio",
-    page: Home,
+    page: () => <div>Porfolio</div>,
   }, {
     name: "Contact",
-    page: Home,
+    page: () => <div>Contact</div>,
   }];
   const [activeRoute, setActiveRoute] = useState(routes[0]);
   return (
