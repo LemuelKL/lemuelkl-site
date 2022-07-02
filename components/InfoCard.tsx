@@ -12,7 +12,7 @@ const InfoCard = () => {
       />
       <div class={tw`flex flex-col text-white items-center`}>
         <div class={tw`text-3xl font-bold`}>Lemuel Lee</div>
-        <div class={tw`text-lg`}>Open for Opportunities</div>
+        <div class={tw`text-lg`}>Open for Opportunities 📨</div>
       </div>
     </div>
   );

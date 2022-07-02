@@ -2,6 +2,8 @@
 import { h } from "preact";
 import { tw } from "@twind";
 
+import Link from "./Link.tsx";
+
 export default function Home() {
   return (
     <div class={tw`flex flex-col`}>
@@ -12,16 +14,11 @@ export default function Home() {
       </div>
       <div>
         <span class={tw`font-mono`}>BEng(CompSc) yr2. at&nbsp;</span>
-        <a
-          class={tw`text-lg hover:text-underline hover:bg-gray-700`}
-          href="https://www.hku.hk"
-        >
-          The University of Hong Kong
-        </a>
+        <Link text="The University of Hong Kong" dest="https://www.hku.hk" />
       </div>
       <div class={tw`text-xl`}>
         <div>
-          Specialized in JavaScript & TypeScript related web development
+          Specialized in JavaScript & TypeScript web development
         </div>
       </div>
     </div>

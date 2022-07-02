@@ -3,16 +3,18 @@ import { h } from "preact";
 import { tw } from "@twind";
 
 type NavButtonProps = {
-  active: boolean
+  active: boolean;
   text: string;
   handleClick: () => void;
 };
 
-const NavButton = ({active, text, handleClick }: NavButtonProps) => {
+const NavButton = ({ active, text, handleClick }: NavButtonProps) => {
+  const activeBgStyle = `bg-${active ? "yellow-500" : "gray-700"}`;
+  const activeTxtStyle = `text-${active ? "black" : "gray-300"}`;
   return (
     <button
       class={tw
-        `bg-${active ? 'cyan' : 'gray'}-700 w-full rounded-full p-2 text-coolGray-200 text-md font-bold hover:bg-cyan-700 shadow-cyan-100 hover:shadow-2xl shadow`}
+        `w-full rounded-full p-2 ${activeBgStyle} ${activeTxtStyle} hover:bg-yellow-500 text-md font-bold  shadow-cyan-100 hover:shadow-2xl shadow`}
       onClick={handleClick}
     >
       {text}

@@ -7,7 +7,9 @@ import * as $1 from "./routes/api/joke.ts";
 import * as $2 from "./routes/index.tsx";
 import * as $3 from "./routes/weather/[type].tsx";
 import * as $4 from "./routes/weather/index.tsx";
-import * as $$0 from "./islands/Router.tsx";
+import * as $$0 from "./islands/NavPanel.tsx";
+import * as $$1 from "./islands/Router.tsx";
+import * as $$2 from "./islands/ScreenSize.tsx";
 
 const manifest = {
   routes: {
@@ -18,7 +20,9 @@ const manifest = {
     "./routes/weather/index.tsx": $4,
   },
   islands: {
-    "./islands/Router.tsx": $$0,
+    "./islands/NavPanel.tsx": $$0,
+    "./islands/Router.tsx": $$1,
+    "./islands/ScreenSize.tsx": $$2,
   },
   baseUrl: import.meta.url,
 };

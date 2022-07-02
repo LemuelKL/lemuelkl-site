@@ -2,6 +2,8 @@
 import { ComponentChildren, h } from "preact";
 import { tw } from "@twind";
 
+import Link from "./Link.tsx";
+
 export default function Home() {
   return (
     <div class={tw`w-full flex flex-col align-center gap-6`}>
@@ -16,20 +18,32 @@ export default function Home() {
       </Section>
       <Section title="Experiences">
         <div>
-          Student Teaching Assistant at HKU for ENGG1330 and ENGG1340/COMP2113
+          Student Teaching Assistant at{" "}
+          <Link text="HKU" dest="https://www.hku.hk" /> for{" "}
+          <Link
+            text="ENGG1330"
+            dest="https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2019/engg1330.html"
+          />{" "}
+          and{" "}
+          <Link
+            text="ENGG140/COMP2113"
+            dest="https://www.cs.hku.hk/index.php/programmes/course-offered?infile=2019/engg1340.html"
+          />
         </div>
         <div>
-          Fullstack Developer at SPYC
+          Fullstack Developer (freelance) at{" "}
+          <Link text="SPYC" dest="https://www.pyc.edu.hk" />
         </div>
         <div>
-          Question Writer & Programmer at SPYC
+          Question Writer & Programmer (freelance) at{" "}
+          <Link text="SPYC" dest="https://www.pyc.edu.hk" />
         </div>
       </Section>
       <Section title="interests">
         <div>Software Engineering</div>
         <div>Teaching</div>
         <div>Cycling</div>
-        <div>Dialogs</div>
+        <div>Dialogue</div>
       </Section>
     </div>
   );
