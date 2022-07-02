@@ -1,4 +1,10 @@
-# fresh project
+# Lemuel's Personal Site
+
+Deployed live [here](https://lemuelkl.deno.dev) with [Deno Deploy](https://deno.com/deploy).
+
+# Technical Details
+
+This is a [Fresh](https://fresh.deno.dev) project.
 
 ### Usage
 
