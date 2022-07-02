@@ -1,7 +1,6 @@
 /** @jsx h */
 import { h } from "preact";
-import { tw } from "@twind";
-import { useEffect, useState } from "preact/hooks";
+import { tw } from "@twind";;
 
 import type { Route } from "./Router.tsx";
 import InfoCard from "../components/InfoCard.tsx";

@@ -21,6 +21,12 @@ export default function Home() {
           Specialized in JavaScript & TypeScript web development
         </div>
       </div>
+      <a
+        class={tw`mt-11 self-end hover:underline italic font-bold`}
+        href="/portal"
+      >
+        {`explore this site`}
+      </a>
     </div>
   );
 }

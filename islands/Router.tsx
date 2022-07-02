@@ -5,6 +5,7 @@ import { useEffect, useState } from "preact/hooks";
 
 import Home from "../components/Home.tsx";
 import About from "../components/About.tsx";
+import Contact from "../components/Contact.tsx";
 
 import NavPanel from "../islands/NavPanel.tsx";
 
@@ -28,9 +29,9 @@ export default function Router() {
     page: () => <div>Porfolio</div>,
   }, {
     name: "Contact",
-    page: () => <div>Contact</div>,
+    page: Contact,
   }];
-  const [activeRoute, setActiveRoute] = useState(routes[1]);
+  const [activeRoute, setActiveRoute] = useState(routes[0]);
 
   const [windowDimension, detectHW] = useState({
     winWidth: window.innerWidth,
@@ -55,7 +56,7 @@ export default function Router() {
   return (
     <div class={tw`w-screen h-screen flex justify-center bg-coolGray-600`}>
       <div class={tw`w-full max-w-7xl flex bg-green-500 shadow shadow-2xl`}>
-        {windowDimension.winWidth >= 1280 && showNavPanel &&
+        {windowDimension.winWidth >= 768 && showNavPanel &&
           (
             <NavPanel
               routes={routes}
