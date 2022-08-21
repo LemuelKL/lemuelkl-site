@@ -13,7 +13,7 @@ export default function Home() {
         <span class={tw`text-yellow-400 font-bold text-5xl`}>Lemuel Lee</span>
       </div>
       <div>
-        <span class={tw`font-mono`}>BEng(CompSc) yr2. at&nbsp;</span>
+        <span class={tw`font-mono`}>BEng(CompSc) yr3. at&nbsp;</span>
         <Link text="The University of Hong Kong" dest="https://www.hku.hk" />
       </div>
       <div class={tw`text-xl`}>
